@@ -1,0 +1,59 @@
+\documentclass[12pt,a4paper]{report}
+
+% Page Layout
+\usepackage[
+  a4paper,
+  top    = 1in,
+  bottom = 1in,
+  left   = 1.25in,
+  right  = 1in
+]{geometry}
+
+% Formatting Packages
+\usepackage{setspace}    % Line spacing
+\usepackage{titlesec}    % Custom section formatting
+\usepackage{fancyhdr}    % Page headers/footers
+\usepackage{tocloft}     % TOC formatting
+\usepackage{caption}     % Figure/Table captions
+\usepackage{graphicx}    % Image handling
+\usepackage{float}       % Positioning for figures
+\usepackage{booktabs}    % Better tables
+\usepackage{array}       % Advanced tables
+\usepackage{hyperref}    % Hyperlinks
+\usepackage{listings}    % Code Listings
+\usepackage{times}       % Times New Roman Font
+\usepackage{lipsum}      % Lorem Ipsum
+
+% Paragraph Formatting
+\setlength{\parindent}{0pt}         % No indentation
+\setlength{\parskip}{6pt}           % Space between paragraphs
+\renewcommand{\baselinestretch}{1.5} % Line spacing
+
+% Page Numbering
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{Internship Report}  % Left header
+\fancyhead[R]{\thepage}           % Right header
+\fancyfoot[C]{\thepage}           % Centered page number in footer
+
+% Roman Numerals for Front Matter
+\pagenumbering{roman}
+
+% Table of Contents Formatting
+\renewcommand{\cftchapfont}{\bfseries}  % Bold chapter titles in TOC
+\renewcommand{\cftsecfont}{\bfseries}   % Bold section titles in TOC
+
+% Figure/Table Captions Formatting
+\captionsetup[figure]{labelfont=bf, textfont=bf, font=normalsize, justification=centering}
+\captionsetup[table]{labelfont=bf, textfont=bf, font=normalsize, justification=centering, position=above}
+
+% Exact Font Sizes (Google Docs 12pt, 14pt, 16pt Equivalent)
+\titleformat{\chapter}{\centering\bfseries\fontsize{16}{20}}{\thechapter}{1em}{} % Google Docs 16pt
+\titleformat{\section}{\bfseries\fontsize{14}{18}}{\thesection}{1em}{}  % Google Docs 14pt
+\titleformat{\subsection}{\bfseries\fontsize{12}{16}}{\thesubsection}{1em}{}  % Google Docs 12pt
+
+% Switch to Arabic numbering after front matter
+\newcommand{\startMainMatter}{
+    \cleardoublepage
+    \pagenumbering{arabic}  % Start numeric numbering
+}
