@@ -1,5 +1,4 @@
 \pagestyle{plain}  % Removes header for this page
-
 \addcontentsline{toc}{chapter}{Letter of Approval}  
 
 \centering
@@ -7,9 +6,9 @@
 \vspace{1cm}
 
 \begin{center}
-    {\Large \textbf{Tribhuvan University}} \\  
-    {\large Faculty of Humanities and Social Science} \\  
-    {\large Nepathya College}  
+    {\Large \textbf{\pgfkeysvalueof{/Project/institute/university}}} \\  
+    {\large \pgfkeysvalueof{/Project/institute/faculty}} \\  
+    {\large \pgfkeysvalueof{/Project/institute/college}}  
 \end{center}
 
 \vspace{0.5cm}
@@ -21,31 +20,10 @@
 \vspace{0.5cm}
 
 \justifying{
-\noindent This is to certify that this project prepared by \textbf{AMRIT PAUDEL} entitled \textit{“\projectNameCapital”} in partial fulfillment of the requirements for the degree of Bachelor in Computer Application has been evaluated. In our opinion, it is satisfactory in the scope and quality as a project for the required degree.
+\noindent This is to certify that this project prepared by \textbf{\pgfkeysvalueof{/Project/authors/author1/name}} entitled \textit{“\ProjectTitleCaps”} in partial fulfillment of the requirements for the degree of Bachelor in Computer Application has been evaluated. In our opinion, it is satisfactory in the scope and quality as a project for the required degree.
 }
 
 \vspace{1cm}
-% \begin{table}[h]
-%     \setstretch{0.75}
-%     \centering
-%     \renewcommand{\arraystretch}{2}  % Adjusts row spacing
-%     \begin{tabular}{|c|c|}
-%         \hline
-%         & \\
-%         \textbf{…………………………….}      &      \textbf{…………………………….}      \\  
-%         \textbf{Sameer Gautam}     &      \textbf{Sanjeev Bhandari}  \\  
-%         Supervisor                 &      Principal                  \\  
-%         Nepathya College           &      Nepathya College           \\  
-%         \hline
-%         & \\
-%         \textbf{…………………………….}      &      \textbf{…………………………….}      \\  
-%         \textbf{Shiva Bhattrai}    &      \textbf{Suresh Sharma}     \\  
-%         Internal Examiner          &      External Examiner          \\  
-%         Nepathya College           &      Birendra Multiple Campus   \\  
-%         \hline
-%     \end{tabular}
-% \end{table}
-
 
 \begin{table}[h]
     \setstretch{1.4}
@@ -58,19 +36,19 @@
         & \\
         & \\
 
-        \textbf{…………………………….}      &      \textbf{…………………………….}      \\  
-        \textbf{Arnab Sarkar}      &      \textbf{Sanjeev Bhandari}  \\  
-        Supervisor                 &      Principal                  \\  
-        Nepathya College           &      Nepathya College           \\  
+        \textbf{…………………………….}                                                         & \textbf{…………………………….}                                                       \\  
+        \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/name}} & \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/name}} \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/title}         & \pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/title}         \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/supervisor/institution}   & \pgfkeysvalueof{/Project/letterOfApproval/approvers/principal/institution}   \\  
 
         \hline
         & \\
         & \\
 
-        \textbf{…………………………….}      &      \textbf{…………………………….}      \\  
-        \textbf{Shiva Bhattrai}    &      \textbf{Suresh Sharma}     \\  
-        Internal Examiner          &      External Examiner          \\  
-        Nepathya College           &      Birendra Multiple Campus   \\  
+        \textbf{…………………………….}                                                               & \textbf{…………………………….}                                                               \\  
+        \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/name}} & \textbf{\pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/name}} \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/title}         & \pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/title}         \\  
+        \pgfkeysvalueof{/Project/letterOfApproval/approvers/internalExaminer/institution}   & \pgfkeysvalueof{/Project/letterOfApproval/approvers/externalExaminer/institution}   \\  
 
         \hline
     \end{tabularx}
