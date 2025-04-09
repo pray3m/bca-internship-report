@@ -29,16 +29,7 @@
 \usepackage{array,booktabs,arydshln,xcolor}
 
 \newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
-
-% Paragraph Formatting
-% \setlength{\parindent}{0pt}         % No indentation
-% \setlength{\parskip}{6pt}           % Space between paragraphs
-% \renewcommand{\baselinestretch}{1.5} % Line spacing
-\setstretch{1.5}        % 1.5 line spacing
-\justifying             % full justification
-
-\renewcommand{\normalsize}{\fontsize{12}{18}\selectfont}
-
+\setstretch{1.5}
 
 \fancyhf{}
 \fancyhead[L]{Internship Report}  % Left header
@@ -49,10 +40,6 @@
 % Roman Numerals for Front Matter
 \pagenumbering{roman}
 
-% Table of Contents Formatting
-\renewcommand{\cftchapfont}{\bfseries}  % Bold chapter titles in TOC
-\renewcommand{\cftsecfont}{\bfseries}   % Bold section titles in TOC
-\renewcommand{\cftsubsecfont}{\bfseries}   % Bold subsection titles in TO
 
 % Figure/Table Captions Formatting
 \captionsetup[figure]{
@@ -62,39 +49,39 @@
   labelfont=bf, textfont=bf, font=normalsize, justification=centering, position=above
 }
 
-% -------------------------------------------------------------%
-% Command to Switch Page Numbering to Arabic (after front matter)
-% ---------------------------------------------------------------%
-\newcommand{\startMainMatter}{
-    \cleardoublepage
-    \pagenumbering{arabic}  % Start numeric numbering
-}
-
-\newcommand{\para}[1]{\justifying\noindent\textmd #1\par}
-
-% \usepackage{times}  % or
-\renewcommand{\normalsize}{\fontsize{16}{18}\selectfont}  % 12pt font with 1.5 spacing baseline
-
-
-\setcounter{secnumdepth}{3}  % Number chapters, sections, subsections
-\setcounter{tocdepth}{3}     % Include up to subsection in ToC
-
 % Chapter: 16pt, bold, "Chapter 1: Title"
-\titleformat{\chapter}[hang]{\bfseries\fontsize{126pt}{20pt}}{Chapter \thechapter:}{1em}{}
+\titleformat{\chapter}[hang]{\HeadingChapterFont}{Chapter \thechapter:}{1em}{}
 \titlespacing*{\chapter}{0pt}{0pt}{1em}
 
 % Section: 14pt, bold
-\titleformat{\section}[hang]{\bfseries\fontsize{14pt}{18pt}}{\thesection}{1em}{}
+\titleformat{\section}[hang]{\HeadingSectionFont}{\thesection}{1em}{}
 \titlespacing*{\section}{0pt}{0pt}{1em}
 
 % Subsection: 12pt, bold
-\titleformat{\subsection}[hang]{\bfseries\fontsize{12pt}{16pt}}{\thesubsection}{1em}{}
+\titleformat{\subsection}[hang]{\HeadingSubsectionFont}{\thesubsection}{1em}{}
 \titlespacing*{\subsection}{0pt}{0pt}{1em}
 
 % Subsubsection: 12pt, bold
-\titleformat{\subsubsection}[hang]{\bfseries\fontsize{12pt}{16pt}}{\thesubsubsection}{1em}{}
+\titleformat{\subsubsection}[hang]{\HeadingSubsubsectionFont}{\thesubsubsection}{1em}{}
 \titlespacing*{\subsubsection}{0pt}{0pt}{1em}
 
-\makeatletter
-\DeclareRobustCommand\Large{\@setfontsize\Large{16}{20}}% size and baselineskip reduced
-\makeatother
+% Command to Switch Page Numbering to Arabic (after front matter)
+\newcommand{\startMainMatter}{
+    \cleardoublepage
+    \pagenumbering{arabic} 
+}
+
+\setcounter{secnumdepth}{3}  % Number chapters, sections, subsections
+\setcounter{tocdepth}{3}  
+
+% Table of Contents Formatting
+\renewcommand{\cftchapfont}{\bfseries}  % Bold chapter titles in TOC
+\renewcommand{\cftsecfont}{\bfseries}   % Bold section titles in TOC
+\renewcommand{\cftsubsecfont}{\bfseries}   % Bold subsection titles in TO
+
+\newcommand{\HeadingChapterFont}{\fontsize{16}{20}\bfseries\selectfont}
+\newcommand{\HeadingSectionFont}{\fontsize{14}{17}\bfseries\selectfont}
+\newcommand{\HeadingSubsectionFont}{\fontsize{12}{15}\bfseries\selectfont}
+\newcommand{\HeadingSubsubsectionFont}{\fontsize{12}{14}\bfseries\selectfont}
+\renewcommand{\normalsize}{\fontsize{12}{18}\selectfont}
+\newcommand{\para}[1]{\setstretch{1.5}\justifying\noindent\textmd #1\par}
