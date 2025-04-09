@@ -21,6 +21,13 @@
 \usepackage{apacite}     % APA-style Citation
 \usepackage{hyperref}    % Hyperlinks
 
+\hypersetup{
+    hidelinks,            % Remove colored borders from links
+    colorlinks=false,     % Remove colored text from links
+    pdfborder={0 0 0},   % Remove PDF borders
+    linktoc=all          % Make both section and page numbers linkable
+}
+
 % Section and TOC Formatting
 \usepackage{titlesec}    % Custom section formatting
 \usepackage{tocloft}     % TOC formatting
@@ -72,8 +79,8 @@
 
 % TOC Formatting
 \renewcommand{\cftchapfont}{\bfseries}  % Bold chapter titles in TOC
-\renewcommand{\cftsecfont}{\bfseries}   % Bold section titles in TOC
-\renewcommand{\cftsubsecfont}{\bfseries}   % Bold subsection titles in TO
+\renewcommand{\cftsecfont}{}  
+\renewcommand{\cftsubsecfont}{}  
 
 \renewcommand{\cfttoctitlefont}{\HeadingChapterFont}  
 \renewcommand{\cftloftitlefont}{\HeadingChapterFont}  
