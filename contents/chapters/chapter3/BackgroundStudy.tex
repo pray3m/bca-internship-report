@@ -1,14 +1,39 @@
 \section{Background Study}
-In recent years, Software as a Service (SAAS) has transformed various industries, including healthcare. Traditional hospital management systems were often based on on-premise solutions that required significant investment in hardware and maintenance. With the advent of cloud computing, SAAS-based systems now provide a flexible, scalable, and cost-effective alternative.
 
-Key concepts in this domain include:
+\para{
+The Maison Architecture project is rooted in modern web development technologies and service aggregation principles, specifically tailored to meet the demands of the architectural and construction sectors in France. This section explores the key theories, concepts, and terminologies that shape the foundation of the project.
+}
+
+\boldHeading{Web Development Technologies}
+\para{
+The platform's frontend is powered by Next.js, a React-based framework known for its support of server-side rendering and static site generation. These features enhance performance by reducing page load times and improving search engine optimization (SEO), making it ideal for a dynamic platform like Maison Architecture. Next.js enables real-time interactivity for users, particularly in features such as project listings and professional profiles \cite{vercel2023nextjs}.
+}
+
+\para{
+On the backend, Nest.js—a progressive Node.js framework—ensures the platform is scalable, maintainable, and modular. It integrates seamlessly with GraphQL, which provides an efficient data-fetching solution. GraphQL allows users to query specific pieces of data, reducing unnecessary data transfer. This is particularly valuable for Maison Architecture, where different user roles, including clients, professionals, and admins, require access to tailored data.
+}
+
+\boldHeading{Service Aggregation Platforms}
+\para{
+Service aggregation platforms are intermediaries that connect service providers with clients via a centralized digital marketplace. These platforms facilitate discovery, communication, and transactions within specific industries. In the context of architecture and construction, examples such as Houzz and Thumbtack serve as inspiration. They help clients find qualified professionals for home renovations and new constructions. Maison Architecture emulates this model, providing a directory for French clients to explore vetted architects and builders, simplifying the process of hiring the right professional for their projects \cite{smith2020rise}.
+}
+
+\boldHeading{User Interface and Experience (UI/UX)}
+\para{
+The success of a platform like Maison Architecture heavily depends on its user interface and experience (UI/UX). For the platform to be successful, it must meet several key principles of design:
+}
+
 \begin{itemize}
-  \item \textbf{Cloud Computing:} A model that enables on-demand access to computing resources over the internet, allowing hospitals to scale services as needed.
-  \item \textbf{Multi-Tenancy:} A software architecture where a single instance of the application serves multiple institutions while keeping their data isolated.
-  \item \textbf{Virtualization:} The process of creating virtual versions of hardware or software, which underpins the efficient use of resources in cloud computing.
-  \item \textbf{Scalability and High Availability:} Essential features that ensure the system can handle growth in data and user load while remaining reliable.
-  \item \textbf{Service-Oriented Architecture (SOA):} An approach to design software where services communicate over a network, providing modularity and reusability.
+    \item \textbf{Responsiveness:} The platform must be fully functional across various devices, ensuring it is accessible on desktop, tablet, and mobile devices.
+
+    \item \textbf{Accessibility:} To ensure inclusivity, Maison Architecture adheres to accessibility standards such as WCAG (Web Content Accessibility Guidelines), ensuring that users of varying abilities can use the platform.
+
+    \item \textbf{Clear Navigation:} Logical and easy-to-follow menus are vital for users to browse services, post projects, and track progress without confusion.
+
+    \item \textbf{Feedback Mechanisms:} The platform should offer clear and timely feedback, such as confirmation messages after user actions, to maintain engagement and transparency.
 \end{itemize}
 
-These theories and concepts not only support the technical design of SAAS-based HMS but also help in addressing the growing challenges in modern healthcare such as cost reduction, improved accessibility, and enhanced patient care.
+\para{
+These principles are essential in creating a user-friendly experience, particularly for users from both technical and non-technical backgrounds in the French architecture and construction market \cite{nielsen2018usability}.
+}
 

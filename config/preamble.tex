@@ -13,6 +13,8 @@
 \usepackage{setspace}    % Line spacing
 \usepackage{ragged2e}    % Text alignment
 \usepackage{lipsum}      % Lorem Ipsum
+\usepackage{enumitem}
+\setlist{noitemsep}
 
 % Typography and Fonts
 \usepackage{newtxtext,newtxmath}  % Times New Roman alternative with math
@@ -67,11 +69,12 @@
 
 % Subsection: 12pt, bold
 \titleformat{\subsection}[hang]{\HeadingSubsectionFont}{\thesubsection}{1em}{}
-\titlespacing*{\subsection}{0pt}{0pt}{1em}
+\titlespacing*{\subsection}{0pt}{10pt}{0.5em}
 
 % Subsubsection: 12pt, bold
 \titleformat{\subsubsection}[hang]{\HeadingSubsubsectionFont}{\thesubsubsection}{1em}{}
-\titlespacing*{\subsubsection}{0pt}{0pt}{1em}
+\titlespacing*{\subsubsection}{0pt}{10pt}{0.5em}
+
 
 % ============= TOC Configuration =============
 \setcounter{secnumdepth}{3}
@@ -117,6 +120,13 @@
     \pagenumbering{arabic}
 }
 \newcommand\VRule[1][\arrayrulewidth]{\vrule width #1}
+
+% ============= Custom Non-numbered Heading (Like Subsubsection) =============
+\newcommand{\boldHeading}[1]{%
+  \vspace{1em}%
+  {\noindent\HeadingSubsubsectionFont #1\par}%
+  \vspace{0.5em}%
+}
 
 
 % ============= General Settings =============
